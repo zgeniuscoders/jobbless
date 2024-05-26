@@ -1,21 +1,19 @@
 //
-//  ContentView.swift
+//  MainTabView.swift
 //  jobbless
 //
-//  Created by ZGenius on 16/05/2024.
+//  Created by ZGenius on 23/05/2024.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainTabView: View {
     @State private var selectedTab = 0
     var body: some View {
         TabView(selection: $selectedTab){
             HomeView().tabItem{
                 Image(systemName: "house")
             }
-            
-            
             
             MessagesView().tabItem {
                 Image(systemName: "envelope.fill")
@@ -24,13 +22,10 @@ struct ContentView: View {
             SettingsView().tabItem {
                 Image(systemName: "person")
             }
-        }
-        
+        }.tint(.black)
     }
 }
 
 #Preview {
-    ContentView()
+    MainTabView()
 }
-
-
